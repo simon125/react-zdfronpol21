@@ -1,0 +1,26 @@
+import React from "react";
+import classes from "./solution.module.css";
+
+/**
+ * Twoim zadaniem jest odwzorowanie designu z pliku design.png
+ * do ostylowania komponentu użyj zewnętrzengo pliku ze stylami
+ * oraz podejćia css modules - pamiętaj o poprawnym zaimportowaniu styli
+ *
+ * plik ze stylami musisz uprzednio stworzyć w tym samym folderze - pamiętaj o odpowiednim suffixie w nazwie
+ */
+
+export const StyleCSSModulesExercise = () => {
+  return (
+    <article>
+      <p>Style CSS Modules</p>
+      <p className={classes.bolderText}>Zadania do zrobienia</p>
+      <ul>
+        <li className={classes.task}>Pouczyć się JSa</li>
+        <li className={classes.task}>Pouczyć się CSSa</li>
+        <li className={`${classes.completed} ${classes.task}`}>
+          Pouczyć się Reacta
+        </li>
+      </ul>
+    </article>
+  );
+};

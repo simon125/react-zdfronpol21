@@ -1,0 +1,12 @@
+.bolderText {
+  font-weight: bold;
+}
+
+.task {
+  color: green;
+}
+
+.completed {
+  color: royalblue;
+  text-decoration: line-through;
+}
