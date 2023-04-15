@@ -17,3 +17,24 @@
  * niech najbardziej zewnętrznym elementem będzie tag article który dzięki bibliotece pico css
  * zostaje ostylowany
  */
+
+import React from "react";
+
+export const MyFirstComponent = () => {
+  const mojDiv = <div>hej hej</div>;
+  const mojButton = <button>kliknij</button>;
+
+  return (
+    <div>
+      {mojDiv}, {mojButton},dssdfsdfs <h1>zadanie zrobione</h1>
+    </div>
+  );
+};
+
+export const MyFirstComponent1 = () => {
+  return (
+    <div>
+      <div>hej hej</div> <button>kliknij</button> <h1>zadanie zrobione</h1>
+    </div>
+  );
+};

@@ -4,7 +4,7 @@ import { KomponentFunkcyjny } from "./000_komponent/KomponentFunkcyjny";
 /**
  * LINIA KTÓRĄ NALEŻY ODKOMENTOWAĆ DO ZADANIA 1 W MODULE 1
  */
-// import { MyFirstComponent } from "./000_komponent/exercise001/MyFirstComponent";
+import { MyFirstComponent } from "./000_komponent/exercise001/MyFirstComponent";
 import { KomponentyKlasowy } from "./000_komponent/KomponentyKlasowy";
 import { StyleCSS } from "./001_stylowanie_css/StyleCSS";
 import { StyleCSSModules } from "./001_stylowanie_css/StyleCSSModules";
@@ -48,7 +48,7 @@ function App() {
                 {/* 
                   PONIŻEJ LINIA KTÓRĄ NALEŻY ODKOMENTOWAĆ DO ZADANIA 1 W MODULE 1
                  */}
-                {/* <MyFirstComponent /> */}
+                <MyFirstComponent />
               </>
             }
           />
