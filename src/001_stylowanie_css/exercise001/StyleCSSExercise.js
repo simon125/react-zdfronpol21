@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./StyleCSSExercise.css";
 /**
  * Zadanie
  *
@@ -18,10 +18,12 @@ import React from "react";
 
 export const StyleCSSExercise = () => {
   return (
-    <article>
-      <p>Style CSS Exercise</p>
-      <span>Testowy span</span>
-      <p>przykładowy ostylowany paragraf</p>
+    <article className="main-container">
+      <p className="title">Style CSS Exercise</p>
+      <span className="subtitle">Testowy span</span>
+      <p style={{ display: "inline-block", margin: 5, padding: 5 }}>
+        przykładowy ostylowany paragraf
+      </p>
       <p>
         przekreślony text ten styl przyda się jeszcze później żeby go uzyskać
         skorzystaj z właściowści text-decoration{" "}

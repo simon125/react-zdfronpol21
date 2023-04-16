@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./StyleCSSModule.module.css";
 /**
  * Stylowanie komponentu za pomocą zewnętrznego pliku CSS
  * z suffixem w nazwię .module.css
@@ -11,5 +11,5 @@ import React from "react";
  */
 
 export const StyleCSSModules = () => {
-  return <article>StyleCSSModules</article>;
+  return <article className={classes.mojaKlasa}>StyleCSSModules</article>;
 };
