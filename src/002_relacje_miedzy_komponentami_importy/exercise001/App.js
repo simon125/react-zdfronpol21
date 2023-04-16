@@ -1,5 +1,3 @@
-import React from "react";
-
 /**
  * Twoim zadaniem jest odwzorowanie designu z pliku desing.png
  * jednak tym razem istotą zadania NIE jest dokładna implementacja designu a
@@ -29,6 +27,17 @@ import React from "react";
  *
  */
 
+import React from "react";
+import { TodoForm } from "./components/TodoForm";
+import { Statistics } from "./components/Statistics";
+import { TodoList } from "./components/TodoList";
+
 export const TodoApp = () => {
-  return <article>TodoApp</article>;
+  return (
+    <article>
+      <TodoForm />
+      <Statistics />
+      <TodoList />
+    </article>
+  );
 };
