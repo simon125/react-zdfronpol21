@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css";
 /**
  *
  * Twoim zadaniem jest odwzorowanie designu z pliku design.png
@@ -15,11 +15,50 @@ import React from "react";
 
 export const StyleInlineExercise = () => {
   return (
-    <article>
+    <article style={{ verticalAlign: "bottom" }}>
       <p> Style Inline Exercise</p>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div
+        style={{
+          width: 50,
+          height: 50,
+          background: "blue",
+          display: "inline-block",
+          borderRadius: "50%",
+          color: "white",
+          textAlign: "center",
+          lineHeight: "50px",
+        }}
+      >
+        1
+      </div>
+      <div
+        style={{
+          width: 50,
+          height: 50,
+          background: "blue",
+          display: "inline-flex",
+          borderRadius: "50%",
+          color: "white",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        2
+      </div>
+      <div
+        style={{
+          width: 50,
+          height: 50,
+          background: "blue",
+          display: "inline-block",
+          borderRadius: "50%",
+        }}
+      ></div>
+      {/* <div> */}
+      <div className="kolo1">1</div>
+      <div className="kolo2">2</div>
+      <div className="kolo3">3</div>
+      {/* </div> */}
     </article>
   );
 };
