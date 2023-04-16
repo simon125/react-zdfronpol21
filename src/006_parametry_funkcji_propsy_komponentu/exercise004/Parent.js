@@ -1,9 +1,12 @@
 import React from "react";
 
 /**
- * tablica jako props
+ * Twoim zadnaniem jest wyświetlenie listy zadań w komponencie Child.js
+ * lista zadań jest przechowywana w stanie useState (tasks)
+ * dodatkowo każdy element listy powinnien posiadać swój przycisk do usuwania elementu
+ *
  */
 
-export const Parent = () => {
+export const Parent4 = () => {
   return <div>Parent</div>;
 };

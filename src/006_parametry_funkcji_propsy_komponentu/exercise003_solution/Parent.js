@@ -1,4 +1,5 @@
 import React from "react";
+import { Child } from "./Child";
 
 /**
  *
@@ -20,5 +21,13 @@ import React from "react";
  */
 
 export const Parent2 = () => {
-  return <article></article>;
+  return (
+    <article>
+      <ul>
+        <Child label="Name" value="John" />
+        <Child label="Last Name" value="Doe" />
+        <Child label="Age" value="20" />
+      </ul>
+    </article>
+  );
 };

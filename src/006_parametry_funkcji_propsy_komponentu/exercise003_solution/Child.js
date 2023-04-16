@@ -10,10 +10,17 @@ import React from "react";
  * niech value będzie umieszczone pomiędzy tagi <b></b>
  *
  *
+ *
  * hint:
  * props.label
  * props.value
  *
  */
 
-export const Child = () => {};
+export const Child = (props) => {
+  return (
+    <li>
+      {props.label}: <b>{props.value}</b>
+    </li>
+  );
+};

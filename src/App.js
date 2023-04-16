@@ -32,6 +32,9 @@ import { TextField } from "./005_eventy_przyciski_formularze_inputy/exercise002/
 import { Calculator } from "./005_eventy_przyciski_formularze_inputy/exercise003/Calculator";
 import { TodoForm } from "./005_eventy_przyciski_formularze_inputy/exercise004/Form";
 import { SimpleCounter } from "./005_eventy_przyciski_formularze_inputy/exercise000/Counter";
+import { Parent1 } from "./006_parametry_funkcji_propsy_komponentu/exercise001/Parent";
+import { GrandParent } from "./006_parametry_funkcji_propsy_komponentu/exercise002/GrandParent";
+import { Parent2 } from "./006_parametry_funkcji_propsy_komponentu/exercise003/Parent";
 
 function App() {
   return (
@@ -113,6 +116,9 @@ function App() {
             element={
               <>
                 <Props />
+                <Parent1 />
+                <GrandParent />
+                <Parent2 />
               </>
             }
           />
