@@ -1,12 +1,11 @@
 import React from "react";
-
-/**
- * - relacje miedzy komponentami parent-child, siblings
- * - importy & exporty plików/komponentów
- * - named export  vs  default export
- * - odwzorowanie designu relacje.png
- */
+import { Parent } from "./components/Parent/Parent";
 
 export const Relacje = () => {
-  return <article>Relacje</article>;
+  return (
+    <article>
+      App.js
+      <Parent />
+    </article>
+  );
 };

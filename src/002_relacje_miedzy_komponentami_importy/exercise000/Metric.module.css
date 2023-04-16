@@ -1,0 +1,30 @@
+.outerContainer {
+  padding-top: 40px;
+  border-radius: 15px;
+  background-color: orange;
+  width: 230px;
+}
+
+.innerContainer {
+  background-color: darkmagenta;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+}
+
+.prevWeekValue {
+  font-size: 11px;
+  color: white;
+}
