@@ -14,12 +14,7 @@ import { Assets } from "./003_assety/Assets";
 import { KomponentBezStanu } from "./004_stan_komponentu/KomponentBezStanu";
 import { StanKomponentu } from "./004_stan_komponentu/StanKomponentu";
 import { Eventy } from "./005_eventy_przyciski_formularze_inputy/Events";
-import { InputyKontrolowane } from "./005_eventy_przyciski_formularze_inputy/InputyKontrolowane";
 import { Props } from "./006_parametry_funkcji_propsy_komponentu/Example";
-// import { ListyTabele } from "./007_listy_tabele/Example";
-// import { WyswietlanieWarunkowe } from "./008_wyswietlanie_warunkowe/Example";
-// import { Lifecycle } from "./009_cykl_zycia_komponentu/Example";
-// import { UsersApp } from "./010_project/Example";
 import { StyleCSSExercise } from "./001_stylowanie_css/exercise001/StyleCSSExercise";
 import { StyleInlineExercise } from "./001_stylowanie_css/exercise003/StyleInlineExercise";
 import { StyleCSSModulesExercise } from "./001_stylowanie_css/exercise002/StyleCSSModulesExercise";
@@ -29,12 +24,24 @@ import { MetricsApp } from "./002_relacje_miedzy_komponentami_importy/exercise00
 import { WyswietlStan } from "./004_stan_komponentu/exercise001/WyswietlStan";
 import { Counter } from "./005_eventy_przyciski_formularze_inputy/exercise001/Counter";
 import { TextField } from "./005_eventy_przyciski_formularze_inputy/exercise002/TextField";
-import { Calculator } from "./005_eventy_przyciski_formularze_inputy/exercise003/Calculator";
-import { TodoForm } from "./005_eventy_przyciski_formularze_inputy/exercise004/Form";
+import { AddTwoNumbers } from "./005_eventy_przyciski_formularze_inputy/exercise003/AddTwoNumbers";
+import { CSSEditor } from "./005_eventy_przyciski_formularze_inputy/exercise004/CSSEditor";
+import { Calculator } from "./005_eventy_przyciski_formularze_inputy/exercise005/Calculator";
+import { TodoForm } from "./005_eventy_przyciski_formularze_inputy/exercise006/Form";
 import { SimpleCounter } from "./005_eventy_przyciski_formularze_inputy/exercise000/Counter";
-import { Parent1 } from "./006_parametry_funkcji_propsy_komponentu/exercise001/Parent";
-import { GrandParent } from "./006_parametry_funkcji_propsy_komponentu/exercise002/GrandParent";
-import { Parent2 } from "./006_parametry_funkcji_propsy_komponentu/exercise003/Parent";
+import { Parent1 } from "./006_parametry_funkcji_propsy_komponentu/exercise000/Parent";
+import { TwoStrings } from "./006_parametry_funkcji_propsy_komponentu/exercise001/Parent";
+import { GrandParent } from "./006_parametry_funkcji_propsy_komponentu/exercise004/GrandParent";
+import { Parent2 } from "./006_parametry_funkcji_propsy_komponentu/exercise002/Parent";
+import { CounterWithProps } from "./006_parametry_funkcji_propsy_komponentu/exercise003/Parent";
+import { ListyTabele } from "./007_listy_tabele/Example";
+import { WyswietlanieWarunkowe } from "./008_wyswietlanie_warunkowe/Example";
+import { Lifecycle } from "./009_cykl_zycia_komponentu/Example";
+import { UsersApp } from "./010_project/Example";
+import { Numbers } from "./007_listy_tabele/exercise001/Numbers";
+import { SimpleTodoList } from "./007_listy_tabele/exercise002/SimpleTodoList";
+import { MetricsByProps } from "./007_listy_tabele/exercise003/Metrics";
+import { TodoList } from "./007_listy_tabele/exercise004/TodoList";
 
 function App() {
   return (
@@ -102,10 +109,11 @@ function App() {
             element={
               <>
                 <Eventy />
-                <InputyKontrolowane />
                 <SimpleCounter />
                 <Counter />
                 <TextField />
+                <AddTwoNumbers />
+                <CSSEditor />
                 <Calculator />
                 <TodoForm />
               </>
@@ -117,16 +125,22 @@ function App() {
               <>
                 <Props />
                 <Parent1 />
+                <TwoStrings />
+                <CounterWithProps />
                 <GrandParent />
                 <Parent2 />
               </>
             }
           />
-          {/* <Route
+          <Route
             path="/listings"
             element={
               <>
                 <ListyTabele />
+                <Numbers />
+                <SimpleTodoList />
+                <MetricsByProps />
+                <TodoList />
               </>
             }
           />
@@ -153,7 +167,7 @@ function App() {
                 <UsersApp />
               </>
             }
-          /> */}
+          />
         </Routes>
       </main>
     </>

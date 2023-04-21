@@ -1,4 +1,5 @@
 import React from "react";
+import { Parent } from "./Parent";
 
 /**
  * Twoim zadaniem jest stworzenie 4 komponentów
@@ -33,7 +34,14 @@ export const GrandParent = () => {
   const name = "John";
   const age = 25;
 
-  const sayHello = () => {};
+  const sayHello = () => {
+    console.log(123);
+  };
 
-  return <article>GrandParent</article>;
+  return (
+    <article>
+      GrandParent
+      <Parent name={name} age={age} sayHello={sayHello} />
+    </article>
+  );
 };

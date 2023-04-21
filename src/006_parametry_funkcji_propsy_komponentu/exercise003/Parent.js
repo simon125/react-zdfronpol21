@@ -1,24 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import { Output } from "./Output";
+import { IncreaseButton } from "./IncreaseButton";
+import { DecreaseButton } from "./DecreaseButton";
 
 /**
- *
- * Zadanie 1
- * Twoim Zadaniem jest przekazanie dwóch propsów do komponentu
- * Child - standardowo najpierw musisz stworzyć komponent Child i go zaimportować
- * niech komponent Child wyswietla przekazane propy
- * niech komponent Child będzie wywołany wewnątrze tagów <ul></ul>
- *
- * niech jednym propem będzie słowo label
- * a drugim value - następnie label i value powinny być wyświetlone w komponencie Child
- * zgodnie z designem oraz opisem w pliku Child.js
- *
- * Zadanie 2
- * Wywołaj kilkukrotnie komponent Child z różnymi propami
- * przypominam zgodnie z treścią Child powinien być elementem li
- * czyli wywołania powinny być poimędzy tagiem <ul></ul>
+ * Twoim zadnaniem jest wyświetlenie listy zadań w komponencie Child.js
+ * lista zadań jest przechowywana w stanie useState (tasks)
+ * dodatkowo każdy element listy powinnien posiadać swój przycisk do usuwania elementu
  *
  */
 
-export const Parent2 = () => {
-  return <article></article>;
+export const CounterWithProps = () => {
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <article>
+      <p>Counter with props</p>
+      <IncreaseButton onIncreaseClick={() => setCounter(counter + 1)} />
+      <Output value={counter} />
+      <DecreaseButton onDecreaseClick={() => setCounter(counter - 1)} />
+    </article>
+  );
 };

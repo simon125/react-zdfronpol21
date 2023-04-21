@@ -23,46 +23,19 @@ import React, { useState } from "react";
  */
 
 export const TodoForm = () => {
-  const [title, setTitle] = useState("");
-  const [priority, setPriority] = useState("");
-  const [tasks, setTasks] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const newTask = { title, priority };
-
-    setTasks((prev) => [...prev, newTask]);
-    setTitle("");
-    setPriority("");
-  };
+  /**
+   * Możesz usunąć/dostosować zmienną tasks na swoje potrzeby
+   */
+  const tasks = [
+    { name: "John", lastName: "Doe" },
+    { name: "Jane", lastName: "Doe" },
+  ];
 
   return (
     <article>
       <p>Form</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Task title..."
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <select
-          name=""
-          id=""
-          value={priority}
-          onChange={(e) => setPriority(e.target.value)}
-        >
-          <option value="" hidden>
-            Select priority
-          </option>
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
-        <button type="submit">Submit</button>
-      </form>
-      <div>{JSON.stringify(tasks)}</div>
+
+      <pre>{JSON.stringify(tasks, null, 2)}</pre>
     </article>
   );
 };

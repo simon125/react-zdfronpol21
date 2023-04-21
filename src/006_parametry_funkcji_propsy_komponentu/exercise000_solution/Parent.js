@@ -2,16 +2,16 @@ import React from "react";
 import { Child } from "./Child";
 
 /**
- * Twoim zadaniem jest stworzenie oraz zaimportowanie komponentu Child (plik wyżej) oraz
+ * Twoim zadaniem jest zaimportowanie komponentu Child oraz
  * wywołanie go pomiędzy tagami article
  * niech komponent <Child/> przyjmuje propsa name - wartością dla tego propsa niech będzie
  * dowolny string
  */
 
-export const TwoStrings = () => {
+export const Parent1 = () => {
   return (
     <article>
-      <Child name="John" lastName="Doe" />
+      <Child name="Cześć" />
     </article>
   );
 };

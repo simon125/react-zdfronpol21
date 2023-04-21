@@ -91,7 +91,7 @@ export const Navigation = () => {
                 Propsy
               </Link>
             </li>
-            {/* <li style={lineItemStyle}>
+            <li style={lineItemStyle}>
               <Link onClick={handleCloseClick} to="/listings">
                 Listingi
               </Link>
@@ -110,7 +110,7 @@ export const Navigation = () => {
               <Link onClick={handleCloseClick} to="/project">
                 Projekt
               </Link>
-            </li> */}
+            </li>
           </ul>
         </article>
       </dialog>
