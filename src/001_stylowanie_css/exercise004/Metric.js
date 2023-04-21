@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./Metric.module.css";
 /**
  * Twoim zadaniem jest odwzorowanie designu dostępnego w pliku design.png
  * dokładne odzworowanie nie jest konieczne - przykładowe rozwiązanie które
@@ -12,13 +12,13 @@ export const Metric = () => {
   return (
     <article>
       <p>Metric</p>
-      <div>
-        <div>
-          <p>
+      <div className={classes.outerContainer}>
+        <div className={classes.innerContainer}>
+          <p className={classes.title}>
             Work <span>•••</span>
           </p>
-          <p>32hrs</p>
-          <p>Last Week - 36hrs</p>
+          <p className={classes.value}>32hrs</p>
+          <p className={classes.prevWeekValue}>Last Week - 36hrs</p>
         </div>
       </div>
     </article>

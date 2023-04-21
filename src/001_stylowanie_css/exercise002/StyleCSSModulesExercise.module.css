@@ -1,0 +1,11 @@
+.przykladowyLineItem {
+  color: green;
+}
+
+.niebieskiLineItem {
+  color: blue;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}

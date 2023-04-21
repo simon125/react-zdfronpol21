@@ -1,0 +1,13 @@
+.main-container {
+  background-color: bisque;
+}
+
+.title {
+  text-align: center;
+  color: blueviolet;
+}
+
+.subtitle {
+  font-weight: bold;
+  color: red;
+}

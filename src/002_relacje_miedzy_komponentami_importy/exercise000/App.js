@@ -1,5 +1,7 @@
 import React from "react";
-
+import { Metric1 } from "./Metric1";
+import { Metric2 } from "./Metric2";
+import { Metric3 } from "./Metric3";
 /**
  * Twoim zadaniem jest odwzorowanie designu dostępnego w pliku design.png
  * UWAGA nie musisz implementować tych komponentów od poczatku ponieważ jeden z nich był już
@@ -26,5 +28,11 @@ import React from "react";
  */
 
 export const MetricsApp = () => {
-  return <article>Metrics</article>;
+  return (
+    <article style={{ display: "flex", gap: 20 }}>
+      <Metric1 />
+      <Metric2 />
+      <Metric3 />
+    </article>
+  );
 };

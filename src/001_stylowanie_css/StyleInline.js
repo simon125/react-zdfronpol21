@@ -5,12 +5,13 @@ import React from "react";
  *
  */
 
-const objectWithStyles = {
+const objectWithStylesExternal = {
   backgroundColor: "pink",
 };
 
 export const StyleInline = () => {
   const id = "jakis string";
+
   const objectWithStyles = {
     backgroundColor: "pink",
   };
@@ -27,7 +28,7 @@ export const StyleInline = () => {
       }}
     >
       StyleInline
-      <div style={objectWithStyles}>Lorem ipsum dolor sit amet.</div>
+      <div style={objectWithStylesExternal}>Lorem ipsum dolor sit amet.</div>
     </article>
   );
 };
