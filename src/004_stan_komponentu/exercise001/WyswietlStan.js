@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest odwzorowanie designu dostępnego w pliku desing.png
@@ -18,12 +18,28 @@ const USER = { name: "John", lastName: "Doe", age: 12 };
 const TODO = { name: "pouczyć się JSa", priority: "High" };
 
 export const WyswietlStan = () => {
+  const [user] = useState(USER);
+  const [todo] = useState(TODO);
+
   return (
     <article>
       <h5>Wyswietl Stan</h5>
       <h6>User:</h6>
       <p>
-        Name: <b>TUTAJ BĘDZIE NAME</b>
+        Name: <b>{user.name}</b>
+      </p>
+      <p>
+        LastName: <b>{user.lastName}</b>
+      </p>
+      <p>
+        Age: <b>{user.age}</b>
+      </p>
+      <h5>User's task</h5>
+      <p>
+        Name: <b>{todo.name}</b>
+      </p>
+      <p>
+        Priority: <b>{todo.priority}</b>
       </p>
     </article>
   );

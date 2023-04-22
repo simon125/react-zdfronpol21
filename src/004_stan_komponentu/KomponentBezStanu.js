@@ -8,12 +8,12 @@ export const KomponentBezStanu = () => {
   /**
    * Zmienne jako stan??
    */
-  let number = 1;
+  let number = 5;
   let text = "cześć";
 
-  // setTimeout(() => {
-  //   number += 1;
-  // }, 1000);
+  setTimeout(() => {
+    number += 1;
+  }, 1000);
 
   return (
     <article>

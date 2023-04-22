@@ -15,24 +15,16 @@ import React, { useState } from "react";
  */
 
 export const StanKomponentu = () => {
-  const [number1] = useState(10);
-  const [number2] = useState(15);
+  const [state, setState] = useState("test");
 
-  /**
-   * Computed state
-   *
-   * sum jest przykładem comuted statu tzn takiego stanu który został
-   * wygenerowany/obliczony na podstawie istniejących stanów
-   */
-
-  const sum = number1 + number2;
+  setTimeout(() => {
+    setState("trelemorele");
+  }, 3000);
 
   return (
     <article>
       StanKomponentu
-      <p>
-        Wynik dodawania liczby {number1} i {number2} równa się: {sum}
-      </p>
+      <p>{state}</p>
     </article>
   );
 };
