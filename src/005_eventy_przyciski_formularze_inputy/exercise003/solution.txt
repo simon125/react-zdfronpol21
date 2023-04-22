@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworzenie mini kalkulatorka na podstawie designu.
@@ -8,17 +8,28 @@ import React from "react";
  *
  * następnie na podstawie tych dwóch wartości wyświetlamy sumaryczną ich wartość (wyświetlamy dodane liczby) zgodnie z designem (design.png)
  *
- *
- *
- * hint: wartości z inputów event.target.value są typem string
- *
- * zadanie dla chętnych: dodaj przycisk do aplikacji ze znakiem "=" i wyświetlaj wynik dopiero po wciśnięciu przycisku
  */
 
 export const AddTwoNumbers = () => {
+  const [number1, setNumber1] = useState("");
+  const [number2, setNumber2] = useState("");
+
   return (
     <article>
       <p>Add Two Numbers</p>
+      <input
+        type="text"
+        placeholder="Enter number 1"
+        value={number1}
+        onChange={(e) => setNumber1(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Enter number 2"
+        value={number2}
+        onChange={(e) => setNumber2(e.target.value)}
+      />
+      <p>Result: {Number(number1) + Number(number2)}</p>
     </article>
   );
 };

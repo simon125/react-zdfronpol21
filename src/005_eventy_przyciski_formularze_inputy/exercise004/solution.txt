@@ -38,6 +38,9 @@ export const CSSEditor = () => {
         <option value="" hidden>
           Select color
         </option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="blue">Blue</option>
       </select>
 
       <label>
@@ -48,6 +51,26 @@ export const CSSEditor = () => {
           value="flex-start"
         />{" "}
         Flex-start
+      </label>
+
+      <label>
+        <input
+          onChange={(e) => setJustifyContentValue(e.target.value)}
+          type="radio"
+          name="flex"
+          value="center"
+        />{" "}
+        Center
+      </label>
+
+      <label>
+        <input
+          onChange={(e) => setJustifyContentValue(e.target.value)}
+          type="radio"
+          name="flex"
+          value="flex-end"
+        />{" "}
+        Flex-end
       </label>
 
       <b style={{ marginTop: 30, display: "block" }}>Preview</b>
