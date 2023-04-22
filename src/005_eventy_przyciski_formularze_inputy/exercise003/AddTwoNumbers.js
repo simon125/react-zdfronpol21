@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworzenie mini kalkulatorka na podstawie designu.
@@ -16,9 +16,25 @@ import React from "react";
  */
 
 export const AddTwoNumbers = () => {
+  const [number1, setNumber1] = useState("");
+  const [number2, setNumber2] = useState("");
+
   return (
     <article>
       <p>Add Two Numbers</p>
+      <input
+        type="text"
+        placeholder="Enter number 1"
+        value={number1}
+        onChange={(event) => setNumber1(event.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Enter number 2"
+        value={number2}
+        onChange={(event) => setNumber2(event.target.value)}
+      />
+      <p>Wynik: {Number(number1) + Number(number2)}</p>
     </article>
   );
 };

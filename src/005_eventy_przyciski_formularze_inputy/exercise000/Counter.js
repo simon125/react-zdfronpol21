@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworzenie mini aplikacji Counter na podstawie dostępnego
@@ -19,9 +19,26 @@ import React from "react";
  */
 
 export const SimpleCounter = () => {
+  const [counter, setCounter] = useState(0);
+
+  const handleDecreaseClick = () => {
+    const newCounter = counter - 1;
+    setCounter(newCounter);
+  };
+
+  function handleIncreaseClick() {
+    setCounter(counter + 1);
+  }
+
   return (
     <article>
       <p>Counter</p>
+      {/* wersja z handlerem inlinowym */}
+      {/* <button onClick={() => setCounter(counter + 1)}>+1</button> */}
+      {/* wersja z handlerem zdefiniowanym wyżej */}
+      <button onClick={handleIncreaseClick}>+1</button>
+      <input value={counter} type="text" readOnly />
+      <button onClick={handleDecreaseClick}>-1</button>
     </article>
   );
 };

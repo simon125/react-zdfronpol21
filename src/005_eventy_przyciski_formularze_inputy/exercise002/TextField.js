@@ -13,11 +13,19 @@ import React, { useState } from "react";
  */
 
 export const TextField = () => {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <article>
       <p>TextField</p>
-      <input type="text" />
-      <p></p>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(event) => {
+          setInputValue(event.target.value);
+        }}
+      />
+      <p>Wartość z inputu: {inputValue}</p>
     </article>
   );
 };

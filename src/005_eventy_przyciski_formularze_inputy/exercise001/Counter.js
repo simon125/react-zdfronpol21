@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworznie bardziej złozonej aplikacji typu Counter
@@ -8,9 +8,16 @@ import React from "react";
  */
 
 export const Counter = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <article>
       <p>Counter v2</p>
+      <button onClick={() => setCounter(counter + 5)}>+5</button>
+      <button onClick={() => setCounter(counter + 1)}>+1</button>
+      <input value={counter} type="text" readOnly />
+      <button onClick={() => setCounter(counter - 1)}>-1</button>
+      <button onClick={() => setCounter(counter - 5)}>-5</button>
     </article>
   );
 };

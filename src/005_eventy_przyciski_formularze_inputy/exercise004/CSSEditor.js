@@ -26,6 +26,10 @@ export const CSSEditor = () => {
   const [backgroundColor, setBackgroundColor] = useState("green");
   const [justifyContentValue, setJustifyContentValue] = useState("flex-start");
 
+  const handleRadioButtonChange = (e) => {
+    setJustifyContentValue(e.target.value);
+  };
+
   return (
     <article>
       <p>CSSEditor</p>
@@ -38,16 +42,43 @@ export const CSSEditor = () => {
         <option value="" hidden>
           Select color
         </option>
+        <option value="#345312">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="rgba(120,120,120,0.7)">RGBA</option>
       </select>
+
+      <input type="color" onChange={(event) => ({})} />
+
+      <input type="range" min={0} max={100} step={10} />
 
       <label>
         <input
-          onChange={(e) => setJustifyContentValue(e.target.value)}
+          onChange={handleRadioButtonChange}
           type="radio"
           name="flex"
           value="flex-start"
         />{" "}
         Flex-start
+      </label>
+
+      <label>
+        <input
+          onChange={handleRadioButtonChange}
+          type="radio"
+          name="flex"
+          value="center"
+        />{" "}
+        Center
+      </label>
+
+      <label>
+        <input
+          onChange={handleRadioButtonChange}
+          type="radio"
+          name="flex"
+          value="flex-end"
+        />{" "}
+        Flex-end
       </label>
 
       <b style={{ marginTop: 30, display: "block" }}>Preview</b>

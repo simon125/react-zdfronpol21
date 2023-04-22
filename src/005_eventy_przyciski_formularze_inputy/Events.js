@@ -52,7 +52,7 @@ export const Eventy = () => {
       na sztywno przypisany string - brak kontroli - brak możliwości odczytu wartosci
       user nie moze nic wpisywać
       */}
-      <input value={"zwykly string trelmorele"} />
+      {/* <input value={"zwykly string trelmorele"} /> */}
 
       <input
         value={textInputValue2}
