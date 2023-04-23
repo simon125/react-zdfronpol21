@@ -1,5 +1,4 @@
 import React from "react";
-import { Parent } from "./Parent";
 
 /**
  *
@@ -42,10 +41,5 @@ export const GrandParent = () => {
     console.log(123);
   };
 
-  return (
-    <article>
-      GrandParent
-      <Parent name={name} age={age} sayHello={sayHello} />
-    </article>
-  );
+  return <article>GrandParent</article>;
 };
