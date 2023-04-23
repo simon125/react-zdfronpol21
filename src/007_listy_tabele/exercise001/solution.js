@@ -4,10 +4,9 @@ import React, { useState } from "react";
  * Twoim zadaniem jest na podstawie designu wyświetlić liczby (numbers)
  * za pomocą metody na tabliach map
  *
- * niech każda liczba będzie wewnątrz elementu li - co za tym idzie? map powinien być wywołany wewnątrz
- * elmementu ul
+ * niech każda liczba będzie wewnątrz elementu li
  *
- * hint: nie zapomnij o atrybucie key
+ * nie zapomnij o atrybucie key
  *
  * ⭐ niech pierwszy i ostatni element tablicy będą koloru czerwonego - użyj stylu inlinowego
  * oraz wyrażenia warunkowego (ternary operator) do przypisania koloru
@@ -19,6 +18,11 @@ export const Numbers = () => {
   return (
     <article>
       <p>Numbers</p>
+      <ul>
+        {numbers.map((number) => (
+          <li key={number}>{number}</li>
+        ))}
+      </ul>
     </article>
   );
 };

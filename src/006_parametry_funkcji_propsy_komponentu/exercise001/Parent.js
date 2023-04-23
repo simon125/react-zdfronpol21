@@ -1,18 +1,14 @@
 import React from "react";
-import { Child } from "./Child";
 
 /**
  * Twoim zadaniem jest stworzenie oraz zaimportowanie komponentu Child (plik wyżej) oraz
  * wywołanie go pomiędzy tagami article
- * niech komponent <Child/> przyjmuje propsa name - wartością dla tego propsa niech będzie
- * dowolny string
+ * niech komponent <Child/> przyjmuje 2 propsy name oraz lastName - wartosciami dla tych propsów niech beędą
+ * dowolne stringi
+ *
+ * przekazane dane poprzez propsy należy wyświetlić w komponencie Child zgodnie z designem
  */
 
 export const TwoStrings = () => {
-  return (
-    <article>
-      Two strings as in props
-      <Child name="John" lastName="Doe" />
-    </article>
-  );
+  return <article>Two strings as in props</article>;
 };

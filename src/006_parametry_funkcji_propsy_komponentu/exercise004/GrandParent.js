@@ -2,6 +2,10 @@ import React from "react";
 import { Parent } from "./Parent";
 
 /**
+ *
+ * Props drilling - pojawia się takie pytanie na rekrutacjach następnym pytaniem ciągnącym temat jest
+ * "jak sobie z nim radzić"
+ *
  * Twoim zadaniem jest stworzenie 4 komponentów
  * - GranParent (istnieje),
  * - Parent (Parent.js)

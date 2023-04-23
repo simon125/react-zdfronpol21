@@ -1,4 +1,5 @@
 import React from "react";
+import { Metric } from "./Metric";
 
 /**
  * Twoim zadaniem jest dynamiczne wyświetlenie metryk określonych w tablicy
@@ -23,6 +24,11 @@ export const MetricsByProps = () => {
   return (
     <article>
       <p>Metrics</p>
+      <div style={{ display: "flex", gap: 25 }}>
+        {METRICS.map((metric) => (
+          <Metric metric={metric} />
+        ))}
+      </div>
     </article>
   );
 };

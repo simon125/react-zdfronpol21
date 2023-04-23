@@ -35,7 +35,11 @@ export const SimpleTodoList = () => {
   return (
     <article>
       <p>SimpleTodoList</p>
-      <ul></ul>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task}>{task}</li>
+        ))}
+      </ul>
     </article>
   );
 };
