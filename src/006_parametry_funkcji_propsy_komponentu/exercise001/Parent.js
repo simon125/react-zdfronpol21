@@ -1,4 +1,5 @@
 import React from "react";
+import { Child } from "./Child";
 
 /**
  * Twoim zadaniem jest stworzenie oraz zaimportowanie komponentu Child (plik wyżej) oraz
@@ -10,5 +11,14 @@ import React from "react";
  */
 
 export const TwoStrings = () => {
-  return <article>Two strings as in props</article>;
+  return (
+    <article>
+      <Child name="John" lastName="Jakis tam" />
+      <Child />
+      <Child />
+      <Child name="trelemorele" />
+
+      {/* <Child name="cokolwiek" lastName="Doe" /> */}
+    </article>
+  );
 };

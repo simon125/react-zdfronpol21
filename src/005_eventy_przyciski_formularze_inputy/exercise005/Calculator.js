@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworzenie aplikacji typu kalkulator na podstawie designu z pliku desing.png
@@ -21,24 +21,68 @@ import React from "react";
  */
 
 export const Calculator = () => {
+  const [number1, setNumber1] = useState("");
+  const [number2, setNumber2] = useState("");
+  const [operation, setOperation] = useState("");
+
   // szkielet funkcji do obliczenia wyniku na podstawie dwóch liczb z inputów
-  const getResult = (/* będziesz potrzebował parametrów ??? */) => {
+  const getResult = (n1, n2, op) => {
+    if (op === "+") {
+      return Number(n1) + Number(n2);
+    }
+
+    if (op === "-") {
+      return n1 - n2;
+    }
+
+    if (op === "*") {
+      return n1 * n2;
+    }
+
+    if (op === "/") {
+      return n1 / n2;
+    }
+
     return "";
   };
 
   //   użyj zmienej result do wyświetlenia wyniku
-  const result =
-    getResult(/* JEŻELI TWOJA FUNKJA PRZYJMUJE ARGUMENT MUSISZ GO TU PRZEKAZAĆ */);
+  const result = getResult(number1, number2, operation);
+
+  const handleChange = (event) => {
+    setNumber1(event.target.value);
+  };
 
   return (
     <article>
       <p>Calculator</p>
-
-      <select name="" id="">
-        <option value="" hidden>
-          Wybierz działanie
-        </option>
-      </select>
+      <div style={{ display: "flex", gap: 20 }}>
+        <input type="text" value={number1} onChange={handleChange} />
+        <select
+          name=""
+          id=""
+          value={operation}
+          onChange={(event) => {
+            setOperation(event.target.value);
+          }}
+        >
+          <option value="" hidden>
+            Wybierz działanie
+          </option>
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input
+          type="text"
+          value={number2}
+          onChange={(event) => {
+            setNumber2(event.target.value);
+          }}
+        />
+        <input type="text" readOnly value={result} />
+      </div>
     </article>
   );
 };

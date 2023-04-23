@@ -19,46 +19,41 @@ import { useState } from "react";
  * 7) ⭐⭐ react elements as a props
  */
 
-const ComponentWithButton = (props) => {
-  console.log(props);
-  return (
-    <div>
-      <button onClick={props.test}>Click me</button>
-    </div>
-  );
+const ComponentWithProps = (props) => {
+  return <div>Suma dwóch liczb: {props.number1 + props.number2}</div>;
 };
 
 export const Props = () => {
-  const [counter, setCounter] = useState(10);
+  const [num] = useState(10);
 
-  const incrementCounter = () => {
-    console.log("You cliked me");
-    setCounter(counter + 1);
+  const getResult = () => {
+    /**
+     * BARDZO SKOMPLIKOWANE OBLICZENIA
+     */
+    return 200;
   };
 
   return (
     <article>
       Example
-      {counter}
-      <ComponentWithButton testowyString="test123" test={incrementCounter} />
+      {/* 
+        atrybuty powyżej są opakowane w obiekt
+
+        const props = {
+          number1,
+          number2
+        }
+        
+      */}
+      <ComponentWithProps number1={20} number2={10} />
+      <ComponentWithProps number1={100} number2={num} />
+      <ComponentWithProps number1={getResult()} number2={65 + 120 + 100} />
     </article>
   );
 };
 
-/**
- * 1) paramtry defaultowe
- */
-// const addTwoNumbers = (a = 10, b = 10) => a + b;
-
-/**
- * 2) logiczne
- */
-const addTwoNumbers = (a, b) => (a || 10) + (b || 10);
+const addTwoNumbers = (a, b) => a + b;
 
 addTwoNumbers(10, 20);
 
 addTwoNumbers(40, 10);
-
-addTwoNumbers(40); // 50
-
-addTwoNumbers(); // 20

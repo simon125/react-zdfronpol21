@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Child } from "./Child";
 /**
  * Twoim zadaniem jest stworzenie oraz zaimportowanie komponentu Child (plik wyżej) oraz
  * wywołanie go pomiędzy tagami article
@@ -8,5 +8,12 @@ import React from "react";
  */
 
 export const Parent1 = () => {
-  return <article>Parent</article>;
+  return (
+    <article>
+      Parent
+      <Child name="trelemorele" />
+      <Child name={"riufhewriufheriueiur"} />
+      <Child />
+    </article>
+  );
 };

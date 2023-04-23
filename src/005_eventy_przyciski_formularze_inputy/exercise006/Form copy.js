@@ -26,44 +26,28 @@ import React, { useState } from "react";
 
 export const TodoForm = () => {
   const [title, setTitle] = useState("");
-  const [priority, setPriority] = useState("");
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(["Poczuyc się JSa"]);
 
   return (
     <article>
       <p>Form</p>
       <form
         onSubmit={(event) => {
-          event.preventDefault();
+          event.preventDefault(); // wyłączenie odświeżania
+          const wartośćZInputa = title;
+
           /**
-           * 1) stworzyć obiekt reprezentujący task
-           * 2) zaktualizować stan tablicy z taskami
-           * 3) wyczyszczenie/resetowanie pól w formularzu
-           *
+           * podejście 1 - setowanie stanu za pomocą bezpośrednio podanej wartości
            */
-          // skrótowy sposób tworzenia obiektów
-          // const newTask = {
-          //   title,
-          //   priority
-          // }
-          const newTask = {
-            title: title,
-            priority: priority,
-          };
-
-          // prevTasks to jest tablica obeiktów
-          // setTasks((prevTasks) =>{
-          //   const newTasks = [...prevTasks, newTask]
-
-          //   return newTasks;
-          // });
-
-          // setTasks można zapisać też tak jak poniżej
-          setTasks((prevTasks) => [...prevTasks, newTask]);
-
-          setTitle("");
-          setPriority("");
+          const newTasks = [...tasks, wartośćZInputa];
+          setTasks(newTasks);
+          /**
+           * podejście 2 - setowanie stanu za pomocą przekazanej funckji aktualizującej stan
+           * TA FUNCKJA ZAWSZE MUSI ZWRACAĆ (NOWY) STAN
+           * NOWY STAN = STARE WARTOŚCI + NOWA WARTOSC
+           */
+          setTasks((prevState) => [...prevState, wartośćZInputa]);
         }}
       >
         <input
@@ -74,19 +58,7 @@ export const TodoForm = () => {
           type="text"
           placeholder="Enter title..."
         />
-        <select
-          value={priority}
-          onChange={(event) => {
-            setPriority(event.target.value);
-          }}
-        >
-          <option value="" hidden>
-            Wybierz priority
-          </option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
+
         <button type="submit">Submit</button>
       </form>
 

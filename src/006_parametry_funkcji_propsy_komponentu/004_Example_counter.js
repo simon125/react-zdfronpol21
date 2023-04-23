@@ -19,28 +19,35 @@ import { useState } from "react";
  * 7) ⭐⭐ react elements as a props
  */
 
-const ComponentWithButton = (props) => {
-  console.log(props);
+const CounterControler = (props) => {
   return (
-    <div>
-      <button onClick={props.test}>Click me</button>
+    <div style={{ display: "flex", gap: 20 }}>
+      <button onClick={props.funckjaInkrementujaca}>+1</button>
+      <button onClick={props.funckjaDekrementujaca}>-1</button>
     </div>
   );
+};
+
+const CounterOutput = (props) => {
+  return <p>Wartość countera: {props.output}</p>;
 };
 
 export const Props = () => {
   const [counter, setCounter] = useState(10);
 
-  const incrementCounter = () => {
-    console.log("You cliked me");
-    setCounter(counter + 1);
+  const handleDecreaseClick = () => {
+    setCounter(counter - 1);
   };
 
   return (
     <article>
       Example
-      {counter}
-      <ComponentWithButton testowyString="test123" test={incrementCounter} />
+      <button onClick={() => setCounter(counter + 5)}>+5</button>
+      <CounterControler
+        funckjaInkrementujaca={() => setCounter(counter + 5)}
+        funckjaDekrementujaca={handleDecreaseClick}
+      />
+      <CounterOutput output={counter} />
     </article>
   );
 };
