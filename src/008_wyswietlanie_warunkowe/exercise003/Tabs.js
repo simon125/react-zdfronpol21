@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Home } from "./components/Home";
+import { Form } from "./components/Form";
+import { List } from "./components/List";
 
 /**
  * Twoim zadaniem jest napisanie komponentu wyświetlającego warunkowo
@@ -24,17 +26,48 @@ const style = {
 };
 
 export const Tabs = () => {
+  const [selectedTab, setSelectedTab] = useState("form");
+
+  const handleChange = (event) => {
+    setSelectedTab(event.target.value);
+  };
+
   return (
     <article>
       <div style={style}>
         <label>
-          <input value="home" type="radio" />
+          <input
+            checked={selectedTab === "home"}
+            onChange={handleChange}
+            value="home"
+            type="radio"
+          />
           Home
+        </label>
+        <label>
+          <input
+            checked={selectedTab === "form"}
+            onChange={handleChange}
+            value="form"
+            type="radio"
+          />
+          Form
+        </label>
+        <label>
+          <input
+            checked={selectedTab === "list"}
+            onChange={handleChange}
+            value="list"
+            type="radio"
+          />
+          List
         </label>
       </div>
 
       <div style={{ margin: 20, marginTop: 50 }}>
-        <Home />
+        {selectedTab === "home" && <Home />}
+        {selectedTab === "form" && <Form />}
+        {selectedTab === "list" && <List />}
       </div>
     </article>
   );

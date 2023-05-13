@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "./components/Form";
 import { Home } from "./components/Home";
 import { List } from "./components/List";
+import { Notatka } from "./NotatkaUseEffect";
 
 const style = {
   margin: 20,
@@ -52,12 +53,23 @@ export const Lifecycle = () => {
           />
           List
         </label>
+        <label>
+          <input
+            checked={navigationState === "notatka"}
+            value="notatka"
+            type="radio"
+            name="nav"
+            onChange={handleChange}
+          />
+          Notatka
+        </label>
       </div>
 
       <div style={{ margin: 20, marginTop: 50 }}>
         {navigationState === "home" && <Home />}
         {navigationState === "form" && <Form />}
         {navigationState === "list" && <List />}
+        {navigationState === "notatka" && <Notatka />}
       </div>
     </article>
   );

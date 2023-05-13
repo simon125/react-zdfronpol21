@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { WeightConverter } from "./components/WeightConverter";
 
 /**
  * Twoim zadaniem jest stworzenie miniapki todo list na podstawie designu (desing.png)
@@ -25,17 +26,40 @@ import React, { useState } from "react";
  */
 
 export const SimpleTodoList = () => {
-  const [tasks] = useState([
+  const [tasks, setTasks] = useState([
     "Pouczyć się TSa",
     // NaN,
     "Pouczyć się JSa",
     // undefined,
     "Pouczyć się CSSa",
   ]);
+  const [todoTitle, setTodoTitle] = useState("czesc");
+
   return (
     <article>
+      <WeightConverter />
       <p>SimpleTodoList</p>
-      <ul></ul>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          setTasks((prevState) => [...prevState, todoTitle]);
+          setTodoTitle("");
+        }}
+      >
+        <input
+          type="text"
+          value={todoTitle}
+          onChange={(event) => {
+            setTodoTitle(event.target.value);
+          }}
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <ul>
+        {tasks.map((task) => {
+          return <li key={task}>{task}</li>;
+        })}
+      </ul>
     </article>
   );
 };

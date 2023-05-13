@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * Twoim zadaniem jest stworzenie logiki która sprawi że po przyciśnieciu
@@ -14,16 +14,30 @@ import React from "react";
  */
 
 export const ShowMore = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <article>
       <h2>Super wpis na blogu</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>
-        Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Voluptates
-        dolor velit expedita. Sapiente exercitationem sed illo fugit omnis quae
-        quia, praesentium nihil neque, ex facere.
-      </p>
-      <button style={{ width: "fit-content" }}>Read More/Read less</button>
+
+      {showMore ? (
+        <p>
+          Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Voluptates
+          dolor velit expedita. Sapiente exercitationem sed illo fugit omnis
+          quae quia, praesentium nihil neque, ex facere.
+        </p>
+      ) : (
+        <p>Lorem ipsum dolor sit amet.</p>
+      )}
+
+      <button
+        onClick={() => {
+          setShowMore((prevState) => !prevState);
+        }}
+        style={{ width: "fit-content" }}
+      >
+        {showMore ? "Read less" : "Read More"}
+      </button>
     </article>
   );
 };
