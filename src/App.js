@@ -37,11 +37,13 @@ import { CounterWithProps } from "./006_parametry_funkcji_propsy_komponentu/exer
 import { ListyTabele } from "./007_listy_tabele/Example";
 import { WyswietlanieWarunkowe } from "./008_wyswietlanie_warunkowe/Example";
 import { Lifecycle } from "./009_cykl_zycia_komponentu/Example";
-import { UsersApp } from "./010_project/Example";
 import { Numbers } from "./007_listy_tabele/exercise001/Numbers";
 import { SimpleTodoList } from "./007_listy_tabele/exercise002/SimpleTodoList";
 import { MetricsByProps } from "./007_listy_tabele/exercise003/Metrics";
 import { TodoList } from "./007_listy_tabele/exercise004/TodoList";
+import { ShowMore } from "./008_wyswietlanie_warunkowe/exercise001/ShowMore";
+import { CatDogPerson } from "./008_wyswietlanie_warunkowe/exercise002/CatDogPerson";
+import { Tabs } from "./008_wyswietlanie_warunkowe/exercise003/Tabs";
 
 function App() {
   return (
@@ -149,6 +151,9 @@ function App() {
             element={
               <>
                 <WyswietlanieWarunkowe />
+                <ShowMore />
+                <CatDogPerson />
+                <Tabs />
               </>
             }
           />
@@ -157,14 +162,6 @@ function App() {
             element={
               <>
                 <Lifecycle />
-              </>
-            }
-          />
-          <Route
-            path="/project"
-            element={
-              <>
-                <UsersApp />
               </>
             }
           />

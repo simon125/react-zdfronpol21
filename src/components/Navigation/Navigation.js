@@ -106,11 +106,6 @@ export const Navigation = () => {
                 Cykl życia komponentu
               </Link>
             </li>
-            <li style={lineItemStyle}>
-              <Link onClick={handleCloseClick} to="/project">
-                Projekt
-              </Link>
-            </li>
           </ul>
         </article>
       </dialog>

@@ -3,6 +3,19 @@ import { Form } from "./components/Form";
 import { Home } from "./components/Home";
 import { List } from "./components/List";
 
+/**
+ * Twoim zadaniem jest napisanie komponentu wyświetlającego warunkowo
+ * komponenty dzieci (Home, Form, List - komponenty są dostępne w folderze components pamiętaj o ich zaimportowaniu)
+ * komponenty te będą wyświeltane w zależności od stanu który będzie kontrolowany
+ * przez radio buttony które musisz obsłużyć
+ *
+ * komponent ten będzie symulował navigacje w aplikacji
+ *
+ * działanie aplikacji obrazują designy w folderze design
+ *
+ *
+ */
+
 const style = {
   margin: 20,
   padding: 20,
@@ -12,7 +25,7 @@ const style = {
   gap: 50,
 };
 
-export const Lifecycle = () => {
+export const Tabs = () => {
   const [navigationState, setNavigationState] = useState("home");
 
   const handleChange = (e) => {
