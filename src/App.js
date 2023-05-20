@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "./components/Form";
 import { Home } from "./components/Home";
 import { List } from "./components/List";
+
+import { Routes, Route, Link } from "react-router-dom";
+import { About } from "./components/About";
+import { NotFound } from "./components/NotFound";
+import { TodoDetails } from "./components/TodoDetails";
+import { Users } from "./components/Users";
 
 /**
  * https://reactrouter.com/en/main/start/tutorial
@@ -42,7 +48,7 @@ function App() {
   return (
     <div className="container">
       <article>
-        <div style={style}>
+        {/* <div style={style}>
           <label>
             <input
               checked={navigationState === "home"}
@@ -73,13 +79,32 @@ function App() {
             />
             List
           </label>
-        </div>
+        </div> */}
 
-        <div style={{ margin: 20, marginTop: 50 }}>
+        {/* <div style={{ margin: 20, marginTop: 50 }}>
           {navigationState === "home" && <Home />}
           {navigationState === "form" && <Form />}
           {navigationState === "list" && <List />}
+        </div> */}
+
+        <div style={style}>
+          <Link to="/">Home</Link>
+          <Link to="form">Form</Link>
+          <Link to="todos">Todo List</Link>
+          <Link to="about">About</Link>
+          <Link to="users">Users</Link>
         </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="form" element={<Form />} />
+          <Route path="about" element={<About />} />
+          <Route path="todos" element={<List />} />
+          <Route path="todos/:id" element={<TodoDetails />} />
+          <Route path="users" element={<Users />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </article>
     </div>
   );

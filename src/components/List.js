@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const List = () => {
   const [todos, setTodos] = useState([]);
@@ -33,6 +34,9 @@ export const List = () => {
         {todos.map((todo) => (
           <tr key={todo.id}>
             <td>{todo.title}</td>
+            <td>
+              <Link to={`/todos/${todo.id}`}>Pokaż szczegóły</Link>
+            </td>
             <td>
               <button onClick={() => handleDeleteClick(todo.id)}>DELETE</button>
             </td>
